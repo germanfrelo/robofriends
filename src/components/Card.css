@@ -1,0 +1,30 @@
+.Card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--padding-md);
+	block-size: 100%;
+	padding: var(--padding-md);
+	text-align: center;
+	background-color: hsl(212deg 15% 100% / 7.5%);
+	border-radius: var(--border-radius);
+}
+
+.Card * {
+	margin-block: 0;
+	line-height: var(--lh-small);
+}
+
+.Card img {
+	max-inline-size: 8rem;
+}
+
+.Card-name {
+	font-weight: var(--fw-700);
+}
+
+.Card-email {
+	font-size: 0.75rem;
+	text-transform: lowercase;
+}

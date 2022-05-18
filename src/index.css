@@ -1,0 +1,123 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+
+:root {
+	--color-scheme: light dark;
+
+	/* Font Family */
+	/* stylelint-disable-next-line max-line-length */
+	--ff-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
+	--ff-mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+		monospace;
+
+	/* Font Weight */
+	--fw-700: 700;
+	--fw-600: 600;
+	--fw-500: 500;
+	--fw-400: 400;
+
+	/* Base Size */
+	--base-size: 1rem;
+
+	/* Scale Ratio */
+	--ratio: 1.5;
+
+	/* Size Scale */
+	--s-900: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-800: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-700: calc(var(--base-size) * var(--ratio) * var(--ratio) * var(--ratio));
+	--s-600: calc(var(--base-size) * var(--ratio) * var(--ratio));
+	--s-500: calc(var(--base-size) * var(--ratio));
+	--s-400: var(--base-size);
+	--s-300: calc(var(--base-size) / var(--ratio));
+	--s-200: calc(var(--base-size) / var(--ratio) / var(--ratio));
+	--s-100: calc(var(--base-size) / var(--ratio) / var(--ratio) / var(--ratio));
+
+	/* Line Height */
+	--lh-large: 1.5;
+	--lh-small: 1.25;
+
+	/* Inline size */
+	--page-max-inline-size: 75rem;
+
+	/* Padding */
+	--padding-xxxl: 2em;
+	--padding-xxl: 1.75em;
+	--padding-xl: 1.5em;
+	--padding-lg: 1.25em;
+	--padding-md: 1em;
+	--padding-sm: 0.75em;
+	--padding-xs: 0.5em;
+	--padding-xxs: 0.25em;
+	--padding-xxxs: 0.125em;
+
+	/* Colors */
+	--c-tx-1: hsl(212deg 25% 95%);
+	--c-tx-2: hsl(212deg 15% 65%);
+	--c-bg-1: hsl(212deg 15% 10%);
+	--c-bg-2: hsl(212deg 15% 15%);
+	--c-bg-3: hsl(212deg 15% 20%);
+	--c-bd-1: hsl(212deg 15% 65%);
+
+	/* Border With */
+	--bw-1: 0.0625rem;
+	--bw-2: 0.125rem;
+	--bw-3: 0.1875rem;
+	--bw-4: 0.25rem;
+
+	/* Border Radius */
+	--border-radius: 0.25rem;
+
+	/* Transitions */
+	--tr-duration: 0.1s;
+	--tr-timing-function: ease-in;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	font-family: var(--ff-sans);
+	font-weight: var(--fw-400);
+	line-height: var(--lh-large);
+	color: var(--c-tx-1);
+	color-scheme: var(--color-scheme);
+}
+
+body {
+	background: linear-gradient(to left, rgba(7, 27, 82, 1) 0%, rgba(0, 128, 128, 1) 100%);
+}
+
+h1 {
+	font-family: "Bungee Outline";
+	font-size: var(--s-700);
+	font-weight: var(--fw-700);
+	line-height: var(--lh-small);
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	text-shadow: 0 0 0.25em #0fa;
+}
+
+input {
+	padding-block: var(--padding-xs);
+	padding-inline: var(--padding-sm);
+	line-height: var(--lh-small);
+	color: inherit;
+	background-color: var(--c-bg-2);
+	border: var(--bw-2) solid transparent;
+	border-radius: var(--border-radius);
+	transition:
+		color var(--tr-duration) var(--tr-timing-function),
+		background-color var(--tr-duration) var(--tr-timing-function),
+		border-color var(--tr-duration) var(--tr-timing-function);
+}
+
+:is(input):enabled:where(:hover, :focus) {
+	border-color: var(--c-bd-1);
+}
+
+:is(input):enabled:where(:focus) {
+	background-color: var(--c-bg-1);
+}
