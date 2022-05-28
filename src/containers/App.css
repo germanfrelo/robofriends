@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
 
 .App {
 	inline-size: 90%;
@@ -8,10 +8,10 @@
 	text-align: center;
 }
 
-.App>* {
+.App > * {
 	margin-block: 0;
 }
 
-.App>*+* {
+.App > * + * {
 	margin-block-start: var(--s-500);
 }

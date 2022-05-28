@@ -1,3 +1,4 @@
+import React from "react";
 import "./SearchBox.css";
 
 function SearchBox({ searchField, searchChange }) {
