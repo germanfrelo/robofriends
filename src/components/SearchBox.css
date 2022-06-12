@@ -1,9 +1,0 @@
-.SearchBox {
-	inline-size: 100%;
-	max-inline-size: 20rem;
-}
-
-.SearchBox,
-.SearchBox:focus {
-	background-color: hsl(212deg 15% 0% / 25%);
-}
