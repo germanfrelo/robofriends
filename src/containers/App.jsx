@@ -16,14 +16,19 @@ function App() {
 
 	const onSearchChange = (event) => setSearchField(event.target.value);
 
-	const filteredRobots = robots.filter((robot) => robot.name.toLocaleLowerCase().includes(searchField.toLowerCase()));
+	const filteredRobots = robots.filter((robot) =>
+		robot.name.toLocaleLowerCase().includes(searchField.toLowerCase()),
+	);
 
 	return !robots.length ? (
-		<p> Loading...</p >
+		<p> Loading...</p>
 	) : (
 		<div className="App">
 			<h1>RoboFriends</h1>
-			<SearchBox searchChange={onSearchChange} searchField={undefined} />
+			<SearchBox
+				searchChange={onSearchChange}
+				searchField={undefined}
+			/>
 			<ErrorBoundary>
 				<CardList robots={filteredRobots} />
 			</ErrorBoundary>
